@@ -66,3 +66,4 @@ function TransactionForm({ onAddTransaction }) {
 }
 
 export default TransactionForm; // Export the TransactionForm component for use in other parts of the application
+
