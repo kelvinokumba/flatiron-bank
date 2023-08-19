@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
+// Define a functional component called TransactionList that receives props
 const TransactionList = ({ transactions, searchTerm, onDeleteTransaction }) => {
+  // Filter transactions based on the searchTerm
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.includes(searchTerm)
   );
 
-const handleDelete = (id) => {
-  onDeleteTransaction(id);
-};
+  // Define a function to handle the deletion of a transaction by its ID
+  const handleDelete = (id) => {
+    onDeleteTransaction(id);
+  };
 
+  // Render the component's UI
   return (
     <div>
       <h2>Recent Transactions</h2>
@@ -30,7 +34,8 @@ const handleDelete = (id) => {
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
               <td>
-                <button onClick ={() => handleDelete(transaction.id)}>Delete</button>
+                <button onClick={() => handleDelete(transaction.id)}>Delete</button>
+                {/* Render a button with an onClick event handler to trigger the deletion */}
               </td>
             </tr>
           ))}
@@ -40,4 +45,4 @@ const handleDelete = (id) => {
   );
 };
 
-export default TransactionList
+export default TransactionList; // Export the TransactionList component for use in other parts of the application
