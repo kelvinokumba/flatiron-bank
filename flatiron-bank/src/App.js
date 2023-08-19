@@ -19,6 +19,11 @@ function App() {
 
     const addTransaction = (newTransaction) => {
       setTransactions([...transactions, newTransaction]);
+    };
+
+    const deleteTransaction = (id) => {
+      const updatedTransactions = transactions.filter((transaction) => transaction.id !== id);
+      setTransactions(updatedTransactions);
     }
 
   return (
@@ -31,7 +36,11 @@ function App() {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <TransactionList transactions={transactions} searchTerm={searchTerm} />
+      <TransactionList 
+      transactions={transactions} 
+      searchTerm={searchTerm} 
+      onDeleteTransaction={deleteTransaction} 
+      />
     </div>
   );
 }

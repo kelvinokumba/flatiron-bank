@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-const TransactionList = ({ transactions, searchTerm }) => {
+const TransactionList = ({ transactions, searchTerm, onDeleteTransaction }) => {
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.includes(searchTerm)
   );
+
+const handleDelete = (id) => {
+  onDeleteTransaction(id);
+};
 
   return (
     <div>
@@ -15,6 +19,7 @@ const TransactionList = ({ transactions, searchTerm }) => {
             <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +29,9 @@ const TransactionList = ({ transactions, searchTerm }) => {
               <td>{transaction.description}</td>
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
+              <td>
+                <button onClick ={() => handleDelete(transaction.id)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
