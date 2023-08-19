@@ -5,7 +5,7 @@ import TransactionForm from './TransactionForm';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState('');
 
 
    
@@ -23,10 +23,15 @@ function App() {
 
   return (
     <div className="App">
-      <TransactionList transactions = {transactions}/>
-      
-      <TransactionForm onAddTransaction={addTransaction}/>
-
+      <h1>Bank Transactions</h1>
+      <TransactionForm onAddTransaction={addTransaction} />
+      <input
+        type="text"
+        placeholder="Search by description"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <TransactionList transactions={transactions} searchTerm={searchTerm} />
     </div>
   );
 }
