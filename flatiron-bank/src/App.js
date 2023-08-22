@@ -12,7 +12,7 @@ function App() {
   // Use the useEffect hook to fetch data from a local endpoint when the component mounts
   useEffect(() => {
     // Fetch data from a local endpoint (http://localhost:8001/transactions)
-    fetch('http://localhost:8001/transactions')
+    fetch('https://bank-of-flatiron-yhil.onrender.com/transactions')
       .then((response) => response.json())
       .then(data => setTransactions(data)); // Update the 'transactions' state with fetched data
   }, []); // The empty dependency array ensures this effect runs only once, on component mount
