@@ -1,8 +1,3 @@
-**Here is the link to my deployed react app:**
-https://sirvicmas.github.io/flatiron-bank/
-
-**Here is the link to the deployed backend on render**:
-https://bank-of-flatiron-yhil.onrender.com/transactions
 
 # Phase-2-Code-Challenge-1
 **Getting Started**
@@ -12,8 +7,6 @@ Before you begin, ensure you have met the following requirements:
 Node.js: Make sure you have Node.js installed on your system. You can download it from nodejs.org.
 Installation
 Clone the repository:
-
-git clone git@github.com:SirVicmas/Phase-2-Code-Challenge-1.git
 Change into the project directory:
 
 cd flatiron-bank
@@ -62,9 +55,3 @@ JSON Server: Simulates a RESTful API using a JSON file for data storage.
 **Contributing**
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
 
-## Author
-Made by Victor
-
-## License
-[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-Copyright (c) 2023 **VICTOR MASIBO**
