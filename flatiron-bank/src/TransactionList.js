@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 // Define a functional component called TransactionList that receives props
 const TransactionList = ({ transactions, searchTerm, onDeleteTransaction }) => {
   // Filter transactions based on the searchTerm
