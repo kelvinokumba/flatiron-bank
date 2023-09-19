@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 // Define a functional component called TransactionForm that receives a prop 'onAddTransaction'
 function TransactionForm({ onAddTransaction }) {
     // Define state variables for form inputs
