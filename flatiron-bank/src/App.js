@@ -29,7 +29,6 @@ function App() {
     setTransactions(updatedTransactions); // Update the 'transactions' state with the filtered array
   }
 
-  // Render the component's UI
   return (
     <div className="App">
       <h1>Bank Transactions</h1>
